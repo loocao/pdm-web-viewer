@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>PDM Web Viewer</title>
+    <style>
+        th {
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-
+<table>
+    <tr>
+        <th>表名</th>
+        <th>code</th>
+    </tr>
+    <!--/*@thymesVar id="pdm" type="com.smshen.utils.PDM"*/-->
+    <tr th:each="table : ${pdm.getTables()}">
+        <td th:text="${table.name}">表名</td>
+        <td th:text="${table.code}">code</td>
+    </tr>
+</table>
 </body>
 </html>
