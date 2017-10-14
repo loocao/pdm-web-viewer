@@ -1,8 +1,9 @@
 package com.smshen.utils;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PDMIndex {
+public class PDMIndex implements Serializable {
 	private String id;
 	private String name;
 	private String code;

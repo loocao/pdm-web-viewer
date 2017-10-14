@@ -1,8 +1,11 @@
 package com.smshen.utils;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PDMKey {
+public class PDMKey implements Serializable {
 	private String id;
 	private String name;
 	private String code;

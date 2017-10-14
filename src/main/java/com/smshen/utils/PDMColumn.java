@@ -1,6 +1,10 @@
 package com.smshen.utils;
 
-public class PDMColumn {
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.io.Serializable;
+
+public class PDMColumn implements Serializable {
 	private String id;
 	private String name;
 	private String code;
@@ -12,6 +16,7 @@ public class PDMColumn {
 	private String lowValue;
 	private String highValue;
 	private String comment;
+	@JsonIgnore
 	private PDMTable table;
 
 	public String getId() {

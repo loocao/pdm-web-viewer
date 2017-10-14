@@ -1,8 +1,11 @@
 package com.smshen.utils;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PDMTable {
+public class PDMTable implements Serializable {
 	public String id;
 	private String name;
 	private String code;
@@ -10,6 +13,7 @@ public class PDMTable {
 	private ArrayList<PDMColumn> columns = new ArrayList<PDMColumn>();
 	private ArrayList<PDMKey> keys = new ArrayList<PDMKey>();
 	private PDMKey primaryKey;
+	@JsonIgnore
 	private ArrayList<PDMIndex> indexs = new ArrayList<PDMIndex>();
 
 	public String getId() {
